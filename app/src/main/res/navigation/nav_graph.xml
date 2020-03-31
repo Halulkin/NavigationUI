@@ -7,22 +7,40 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.lyulya.navigationui.FirstFragment"
         android:label="@string/first_fragment_label"
+        android:name="com.lyulya.navigationui.FirstFragment"
         tools:layout="@layout/fragment_first">
 
         <action
             android:id="@+id/action_FirstFragment_to_SettingsFragment"
             app:destination="@id/SettingsFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/SettingsFragment"
-        android:name="com.lyulya.navigationui.SettingsFragment"
         android:label="@string/settings_fragment_label"
+        android:name="com.lyulya.navigationui.SettingsFragment"
         tools:layout="@layout/fragment_settings">
 
+        <action
+            android:id="@+id/action_SettingsFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
         <action
             android:id="@+id/action_SettingsFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.lyulya.navigationui.ThirdFragment"
+        android:label="ThirdFragment"
+        tools:layout="@layout/fragment_third">
+        <action
+            android:id="@+id/action_thirdFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+
 </navigation>

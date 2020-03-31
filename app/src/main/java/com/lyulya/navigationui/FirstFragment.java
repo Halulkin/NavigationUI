@@ -1,5 +1,6 @@
 package com.lyulya.navigationui;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +14,11 @@ public class FirstFragment extends Fragment {
 
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-        // Inflate the layout for this fragment
+            LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+
+        getActivity().setTitle(R.string.first_fragment_label);
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
