@@ -1,6 +1,7 @@
 package com.lyulya.navigationui;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,29 +21,17 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button btSettingsToThird = view.findViewById(R.id.btSettingsToThird);
         Button btSettingsToFirst = view.findViewById(R.id.btSettingsToFirst);
-
         btSettingsToFirst.setOnClickListener(this);
-        btSettingsToThird.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-
-            case R.id.btSettingsToThird:
-                NavHostFragment.findNavController(SettingsFragment.this)
-                        .navigate(R.id.action_SettingsFragment_to_thirdFragment);
-                break;
-
-            case R.id.btSettingsToFirst:
-                NavHostFragment.findNavController(SettingsFragment.this)
-                        .navigate(R.id.action_SettingsFragment_to_FirstFragment);
-                break;
-
-            default:
-                break;
+        if (v.getId() == R.id.btSettingsToFirst) {
+            NavHostFragment.findNavController(SettingsFragment.this)
+                    .navigate(R.id.action_SettingsFragment_to_FirstFragment);
         }
     }
+
 }

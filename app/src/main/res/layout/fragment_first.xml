@@ -6,35 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvFirstFragment"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/line_button"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toTopOf="@id/line_button"
+        android:text="@string/first_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToSettingsFragment"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <view
-            android:id="@+id/line_view"
-            class="com.lyulya.navigationui.Canvas.LineView"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp" />
-
-    </HorizontalScrollView>
 
     <Button
-        android:id="@+id/line_button"
+        android:id="@+id/btnGoToSettingsFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Random"
+        android:text="forward"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

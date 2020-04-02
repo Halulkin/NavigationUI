@@ -23,24 +23,8 @@
         tools:layout="@layout/fragment_settings">
 
         <action
-            android:id="@+id/action_SettingsFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
-        <action
             android:id="@+id/action_SettingsFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/thirdFragment"
-        android:name="com.lyulya.navigationui.ThirdFragment"
-        android:label="ThirdFragment"
-        tools:layout="@layout/fragment_third">
-        <action
-            android:id="@+id/action_thirdFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-        <action
-            android:id="@+id/action_thirdFragment_to_SettingsFragment"
-            app:destination="@id/SettingsFragment" />
     </fragment>
 
 </navigation>
